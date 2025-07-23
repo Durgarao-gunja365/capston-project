@@ -38,6 +38,7 @@ jobs:
 
     - name: Push Docker Image
       run: |
-        docker tag django-app /${{ secrets.DOCKER_USERNAME }}/django-app:latest
-        docker push /${{ secrets.DOCKER_USERNAME }}/django-app:latest
+        docker tag django-app ${{ secrets.DOCKER_USERNAME }}/django-app:latest
+        docker push ${{ secrets.DOCKER_USERNAME }}/django-app:latest
+    
 
