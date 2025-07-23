@@ -28,7 +28,7 @@ jobs:
         python manage.py test
 
     - name: Build Docker Image
-      run: docker build -t django-app .
+      run: docker build -t django-app1 .
 
     - name: List Docker Images  # ✅ Helpful debug step
       run: docker images
@@ -36,9 +36,9 @@ jobs:
     - name: Log in to Docker Hub
       run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
-    - name: Push Docker Image
+    - name: Tag and Push Docker Image
       run: |
-        docker tag django-app ${{ secrets.DOCKER_USERNAME }}/django-app:latest
-        docker push ${{ secrets.DOCKER_USERNAME }}/django-app:latest
+          docker tag django-app ${{ secrets.DOCKER_USERNAME }}/django-app1:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/django-app1:latest
     
 
