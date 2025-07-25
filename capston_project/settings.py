@@ -126,5 +126,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATICFILES_DIRS = [BASE_DIR / 'static']
 
+
+
 # Templates
 TEMPLATES[0]['DIRS'] = [BASE_DIR / 'templates']
