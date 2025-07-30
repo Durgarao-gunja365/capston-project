@@ -1,0 +1,8 @@
+version: 2
+authtoken: rd_30ZkZvpc3W9SL0APLeq3OLoY61Q
+
+tunnels:
+  django-app:
+    addr: 30007
+    proto: http
+    domain: django-demo.ngrok.io
